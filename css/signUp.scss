@@ -1,0 +1,332 @@
+.flip-box {
+  margin-right: 30px;
+  margin-left:30px;
+  justify-content: center;
+  align-content: center;
+  background-color: transparent;
+  width: 100%;
+  max-width: 400px;
+  max-height: 251px;
+  min-width: 250px;
+  height: 35vw;
+  min-height: 150px;
+  padding: 20px;
+  perspective: 1000px; 
+  
+}
+
+.flip-box-inner {
+    width: 100%;
+    max-width: 400px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: -webkit-transform 0.6s;
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    transition: transform 0.6s, -webkit-transform 0.6s;
+}
+
+.flip-box-front, .flip-box-back {
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  width: 100%;
+  max-width: 400px;
+  -webkit-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+}
+
+
+.flip-box-front {
+  background-color: #f9f9f9;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #f9f9f9;
+  color: black;
+  -webkit-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+
+.flip-box-inner.flip{
+  -webkit-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+#name{
+  text-transform: uppercase;
+  position:absolute;
+  top: 77%;
+  left: 10%;
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 300;
+  font-size: 3vw;
+}
+
+@media (min-width: 650px) {
+  #name {
+    font-size: 22px !important;
+  }
+  #creditnumber{
+    font-size: 28px !important;
+  }
+  #expirationdate{
+    font-size: 22px !important;
+  }
+  #security{
+    font-size: 22px !important;
+  }
+  #namesp{
+    font-size: 26px !important;
+  }
+}
+/*
+@media (min-width: 1195px){
+  body {
+    overflow-y: hidden;
+  }
+}
+*/
+#creditnumber{
+  position:absolute;
+  top: 40%;
+  left: 10%;
+  color: white;
+  font-size: 4vw;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 600;
+}
+
+#expirationdate{
+  position:absolute;
+  top: 77%;
+  left: 74.5%;
+  color: black;
+  font-size: 3vw;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 300;
+}
+
+#security{
+  position: absolute;
+  top: 77%;
+  left: 74.5%;
+  color: black;
+  font-size: 3vw;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 300;
+}
+
+#namesp{
+  position: absolute;
+  top: 40%;
+  left: 7%;
+  color: black;
+  font-size: 4vw;
+  font-weight: 600;
+  font-family: 'Rock Salt', cursive;
+}
+
+input{
+  margin-top: 3px;
+  padding: 15px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #dcdcdc;
+}
+
+body{
+  padding: 10%;
+  align-items: center;
+  justify-content: center;
+  background-color: #004396;
+  background: linear-gradient(47deg, #253188 0%, #4e86c3 100%);
+  justify-content: space-around;
+}
+.body {     
+  font-family: 'Fredoka', sans-serif;
+  background-color: #f9f9f9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-family: 'Raleway';
+  min-width: 275px;
+  width: 100vh;
+  max-width: 100%;
+  position: absolute;
+  transform: translate(-50%, 0%);
+  left: 50%;
+  border-radius: 3rem;
+  box-shadow: 10px 10px 7px #111;
+  margin-bottom: 3rem;
+}
+
+.paymentTitle {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+.questions{
+  font-family: 'Fredoka', sans-serif;
+      display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: auto auto;
+    grid-template-rows: 90px 90px 90px 90px 90px 90px;
+    grid-template-areas: "name name""number number""expiration security""total total""email password" "button button";
+    max-width: 400px;
+    padding: 20px;
+}
+
+.questions .field-container:first-of-type {
+    grid-area: name;
+}
+
+.questions .field-container:nth-of-type(2) {
+    grid-area: number;
+}
+
+.questions .field-container:nth-of-type(3) {
+    grid-area: expiration;
+}
+
+.questions .field-container:nth-of-type(4) {
+    grid-area: security;
+}
+
+.questions .field-container:nth-of-type(5) {
+    grid-area: total;
+}
+
+.questions .field-container:nth-of-type(6) {
+    grid-area: email;
+}
+
+.questions .field-container:nth-of-type(7) {
+    grid-area: password;
+}
+
+.questions .field-container:nth-of-type(8) {
+    grid-area: button;
+}
+
+
+.field-container input {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.field-container {
+    position: relative;
+}
+
+#btn {
+  background-color: #00132E;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  font-family: 'Fredoka', sans-serif;
+}
+
+#btn:hover {
+		opacity: 0.8;
+    font-family: 'Fredoka', sans-serif;
+	}
+
+
+#register{
+  font-family: 'Fredoka', sans-serif;
+  background-color: #f9f9f9;
+}
+
+#signUp {
+  background-color: #536b8d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  font-family: 'Fredoka', sans-serif;
+}
+
+
+	/* set a hover effect for the button*/
+#signUp:hover {
+  opacity: 0.8;
+  font-family: 'Fredoka', sans-serif;
+}
+
+h1{
+  font-family: 'Fredoka', sans-serif;
+  text-decoration: underline;
+}
+
+/*Popup*/
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}

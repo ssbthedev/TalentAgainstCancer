@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+      <link href="https://fonts.googleapis.com/css?family=Raleway|Rock+Salt|Source+Code+Pro:300,400,600" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet" type="text/css"/>
+    <link href="css/signUp.css" rel="stylesheet" type="text/css" />
+    <link href="css/navbar.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&display=swap" rel="stylesheet">
+  </head>
+  <body onload="onLoad()">
+    <script src="js/index.js"></script>
+    <nav class="navbar">
+      <div class="nav-title">T.A.C.</div>
+      <a href="#" class="toggle-button" id="hamMenu" onclick="onClick();">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links" id="navLinks">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="signUp.html">Sign Up</a></li>
+          <li><a href="The Show/theShow.html">The Show</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul> 
+      </div>
+      </nav>
+    </nav>
+
+    <div id="id01" class="modal">
+
+      <form class="modal-content animate">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+          <img src="/The Show/avatar.png" alt="Avatar" class="avatar">
+        </div>
+  
+        <div class="container">
+          <h1>Disclaimer!</h1><br>
+          <p>Before you access The Show, you must make a "donation" and account on our website. This is a reminder that all user-entered credit card information is NOT stored anywhere within or program or third-party services. This section of the webpage is meant to mimic an actual implementation of our website. Entering false credit card information will NOT hinder your experience while viewing our webpage. However, we do ask that you enter an email and password that you can use to later login to The Show. Signing up to compete is not required, again, it is there to mimic an actual implementation of our website that would allow the public to compete in The Show. Thank you for taking the time to read this!</p><br>
+          <p onclick="document.getElementById('id01').style.display='none'">-TAC <br><strong>[Close]</strong></p>
+          
+        </div>
+      </form>
+    </div>
+
+    <div hidden id = "successCheck1">
+      <img src="/The Show/checkMarkGif.gif"/> 
+    </div>
+
+    <h1 class="paymentTitle" style="color:#fff;">Payment</h1>
+    <div class = "body">
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-back">
+          <img src="Images/CreditBack.png"     style="width: 100%;
+  max-width: 400px;">
+          <div id="security">
+          </div>
+          <div id="namesp">
+          </div>
+        </div>
+        <div class="flip-box-front">
+          <img src="Images/CreditFront.png" style="  width: 100%;
+  max-width: 400px;">
+          <div id="name">
+          </div>
+          <div id="creditnumber">
+          </div>
+          <div id="expirationdate">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://jsuites.net/v4/jsuites.js"></script>
+    
+    <div class="questions">
+<!--       <h1>Donate</h1> -->
+      <div class="field-container">
+      Name:
+      <input id="name-field"oninput="display('name', this.value), display('namesp', this.value)" type="text" maxlength = 14 inputmode = latin-name required/>
+      </div>
+
+      <div class="field-container">
+      Credit Card Number:
+      <input id="ccNum" oninput = "displayNum('creditnumber', this.value);" maxlength = 19 data-mask ='0000 0000 0000 0000' type="numeric" inputmode = "numeric" required/>
+      </div>
+
+      <div class="field-container">
+      Expiration Date:
+      <input id="expirationdate1" oninput ="displayNum('expirationdate', this.value);" type = "text" pattern = "[0-9]*" inputmode = "numeric" data-mask='mm/yy' maxlength = 5 required/>
+      </div>
+
+      <div class="field-container">
+      Security Code:
+      <input id="sCode" oninput="displayNum('security',this.value)"
+        onfocus = "sed()" onblur = "unsed()" maxlength = 4 inputmode = "numeric" type="numeric" data-inputmask="'mask': '9999'" pattern = "[0-9]*" required/>
+      </div>
+
+      <div class="field-container">
+      Total Donated:
+      <input name = "donate" id  = "donate"  inputmode = "numeric" type="numeric" pattern = "[0-9]*"  data-inputmask="'mask': '$9999'" required/>
+      <div class="field-container">
+  Email
+  <input type="email" id="email" required/>
+      </div>
+      
+      <div class="field-container">
+  Password
+  <input type="password" id="password" required/>
+      </div>
+
+      <p id="errorMessageLogin"></p>
+
+      <div class="field-container">
+        <div class="popup">
+          <input id = "btn" type = "submit">
+        <!-- <span class="popuptext" id="confirm-popup">Payment Recieved!</span> -->
+        </div>
+      </div>
+</div>
+
+    </div>
+
+      <h1 id="googleForm" style="width: 100%; text-align: center;">Want to compete in The Show? Sign up here!</h1>
+
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdf5cvqmLISiaWJle_8u4kVBe-ZRhaFL1QH0jPU9MVaA2B36g/viewform?embedded=true" width="640" height="1217" frameborder="0" marginheight="0" marginwidth="0" >Loading…</iframe>
+
+    <script src = "js/signUp.js"></script>
+    <script type="module" src = "js/base.js"></script>
+    <script type="module" src = "js/Register.js"></script>
+  </body>
+</html>

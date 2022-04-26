@@ -1,0 +1,68 @@
+$color-primary: #c379bb;
+$color-secondary: #218aff;
+
+
+html {
+    scroll-behavior: smooth;
+    
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding:0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    .container {
+      overflow-x: hidden;
+      width: 100%;
+      height: 100%;
+      background-color: rbg(0,0,0);
+      scroll-snap-type: y mandatory;
+      
+      section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        scroll-snap-align: start;
+        position: relative;
+        overflow-y: hidden;
+
+        &:nth-of-type(1) {
+            background-color: #00132B;
+            background: linear-gradient(47deg, #253188 0%, #4e86c3 100%);
+            color: rgb(255,255,255);
+            padding:0;
+            border: 0;
+        }
+  
+        &:nth-of-type(2) {
+          background-color: #0c284b;
+          color: rgb(255,255,255);
+        }
+  
+        &:nth-of-type(3) {
+          background-color: #041731;
+          color: rgb(255,255,255);
+        }
+
+        &:nth-of-type(4) {
+          background-color: #000b1a;
+          color: rgb(255,255,255);
+        }
+
+        &:nth-of-type(5) {
+          background-color: #000b1a;
+          color: rgb(255,255,255);
+        }
+      }
+    }
+  }
+
+  
+
+  
