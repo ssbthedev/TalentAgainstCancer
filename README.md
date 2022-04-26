@@ -1,4 +1,4 @@
-# TalentAgainstCancer
+# Talent Against Cancer
 
 *This is a mock website*
 
