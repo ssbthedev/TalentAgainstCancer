@@ -1,0 +1,203 @@
+<html>
+  <head>
+    <title>Stage With Video</title>
+    <meta name='viewport' content='width=device-width'/>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+<!--     <script src="jquery-3.6.0.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type = "module" src = "aFrameJS.js"></script>
+    <link rel="stylesheet" href="aFrameCSS.css" type = "text/css">
+    <script type = "module" src = "Modal/modal.js"></script>
+    <script src="https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js"></script>
+    <link rel="stylesheet" href="Modal/modal.css" type = "text/css">
+    <link rel="stylesheet" href="../css/navbar.css" type = "text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <script src="../js/index.js"></script>
+    <!--Navbar-->
+    <nav class="navbar">
+      <div class="nav-title">T.A.C.</div>
+      <a href="#" class="toggle-button" id="hamMenu" onclick="onClick();">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links" id="navLinks">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../signUp.html">Sign Up</a></li>
+          <li><a href="">The Show</a></li>
+          <li><a href="../references.html">References</a></li>
+        </ul> 
+      </div>
+      </nav>
+
+    <div hidden id = "successCheck">
+      <img src="checkMarkGif.gif"/> 
+    </div>
+
+    <div id="overlay"></div>
+   <!--Modal-->
+      <div id="id01" class="modal">
+    		<div class="modal-content animate">
+    			<div class="imgcontainer">
+    				<img src="avatar.png" alt="Avatar" class="avatar" id="logoAvatar">
+    			</div>
+    			<div class="container">
+    				<label><b>Email</b></label>
+    				<input type="email" placeholder="Enter Email" id="email" required>
+    
+    				<label><b>Password</b></label>
+    				<input type="password" placeholder="Enter Password" id="password" required>
+
+            <p id="errorMessage"></p>
+    
+    				<button id="login">Login</button>
+    			</div>
+    		</div>
+	    </div>
+   
+    
+    <div class= "aframe">
+    <a-scene embedded light="defaultLightsEnabled: false" cursor="rayOrigin: mouse" vr-mode-ui="enabled: false">
+      <a-sky color="midnightblue" material="color:#06061e" geometry=""></a-sky>
+      <a-entity star-system="count:1000; radius:250; depth:0; color: #FFFAC2"></a-entity>
+
+<!---------------------------------------------------------->
+      
+      <a-entity gltf-model="colors/blue.glb" position="0.76877 0.00759 1.81263" scale="0.02 0.02 0.022" rotation="0 -161.79859 0" id="person">
+        <a-animation 
+          attribute = "position"
+          to = "0.76877 0.15759 1.81263"
+          repeat = "indefinite"
+          dur = "500"
+          direction = "alternate">
+        </a-animation>
+      </a-entity>
+
+      <a-entity gltf-model="colors/red.glb" position="-0.31029 0.00759 2.25821" scale="0.02 0.02 0.022" rotation="0 -192.53 0" id="person">
+        <a-animation 
+          attribute = "position"
+          to = "-0.31029 0.15759 2.25821"
+          repeat = "indefinite"
+          dur = "700"
+          direction = "alternate">
+        </a-animation>
+      </a-entity>
+
+      <a-entity gltf-model="colors/orange.glb" position="-0.73965 0.00759 1.2846" scale="0.02 0.02 0.022" rotation="0 -191.43 0" id="person">
+        <a-animation 
+          attribute = "position"
+          to = "-0.73965 0.15759 1.2846"
+          repeat = "indefinite"
+          dur = "500"
+          direction = "alternate">
+        </a-animation>
+      </a-entity>
+
+      <a-entity gltf-model="colors/purple.glb" position="1.25378 0.00759 1.41466" scale="0.02 0.02 0.022" rotation="0 -160 0" id="person">
+        <a-animation 
+          attribute = "position"
+          to = "1.25378 0.15759 1.41466"
+          repeat = "indefinite"
+          dur = "300"
+          direction = "alternate">
+        </a-animation>
+      </a-entity>
+
+      <a-entity gltf-model="colors/red.glb" position="0.43302 0.00759 1.13925" scale="0.02 0.02 0.022" rotation="0 -170 0" id="person">
+        <a-animation 
+          attribute = "position"
+          to = "0.43302 0.15759 1.13925"
+          repeat = "indefinite"
+          dur = "500"
+          direction = "alternate">
+        </a-animation>
+      </a-entity>
+
+      <a-entity gltf-model="colors/yellow.glb" position="-0.94902 0.00759 1.76634" scale="0.02 0.02 0.022" rotation="0 -191.53 0" id="person">
+        <a-animation 
+          attribute = "position"
+          to = "-0.94902 0.15759 1.76634"
+          repeat = "indefinite"
+          dur = "400"
+          direction = "alternate">
+        </a-animation>
+      </a-entity>
+
+      <a-entity gltf-model="colors/orange.glb" position="0.56778 0.00759 2.38305" scale="0.02 0.02 0.022" rotation="0 -171 0" id="person" >
+        <a-animation 
+          attribute = "position"
+          to = "0.56778 0.15759 2.38305"
+          repeat = "indefinite"
+          dur = "600"
+          direction = "alternate">
+        </a-animation>
+      </a-entity>
+
+      <a-entity gltf-model="colors/purple.glb" position="-1.19763 0.00759 0.94881" scale="0.02 0.02 0.022" rotation="0 -191.77 0" id="person">
+        <a-animation 
+          attribute = "position"
+          to = "-1.19763 0.15759 0.94881"
+          repeat = "indefinite"
+          dur = "300"
+          direction = "alternate">
+        </a-animation>
+      </a-entity>
+
+      <a-entity gltf-model="colors/green.glb" position="0 0.00759 1.48355" scale="0.02 0.02 0.022" rotation="0 -180 0" id="person">
+        <a-animation 
+          attribute = "position"
+          to = "0 0.15759 1.48355"
+          repeat = "indefinite"
+          dur = "300"
+          direction = "alternate">
+        </a-animation>
+      </a-entity>
+
+<!---------------------------------------------------------->
+      
+      <a-entity obj-model="obj:stage.obj;mtl:stage.mtl" rotation="-90 0 0" scale="0.03 0.03 0.03" position="0 0 -3.4634" id="stage"></a-entity>
+
+      <a-entity obj-model="obj:grass.obj;mtl:grass.mtl" rotation="-90 0 0" scale="0.15 0.15 0.03" position="0 0 -0.12138" id="grass"></a-entity>
+
+      <a-entity camera="far: 0.1" position="0 0.97227 0.42759" rotation="-2.7501974166279552 0 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" id = "cameraID" wasd-controls-enabled = "false"></a-entity>
+
+      <a-video width="16" height="9" position="0 1.25983 -3.03747" material="src:https://redirector.googlevideo.com/videoplayback?expire=1648745382&ei=RodFYtXjBNOC-gaRvqqQBA&ip=139.59.128.21&id=o-ANfObM3SOtSESPfXLdLN88aoGxSa4pKeiQbm4pWem048&itag=22&source=youtube&requiressl=yes&mh=51&mm=31%2C26&mn=sn-4g5edn6k%2Csn-5hnedn7s&ms=au%2Conr&mv=m&mvi=1&pl=19&initcwndbps=277500&vprv=1&mime=video%2Fmp4&cnr=14&ratebypass=yes&dur=219.196&lmt=1648694011602777&mt=1648723496&fvip=1&fexp=24001373%2C24007246&c=ANDROID&txp=6211224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgWhOdFvCyTg1dwm6mhNORGiTvusMxon9l9NsPNTvKqFgCIQDZCFbz89-8Zilx9qeFmz8iAmBg1drcZKqhq6rb9ppbgg%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRQIhAMX8HRsBAHz-P-EXP3eJUQWTxlPZLPXbrNpC5m0LtZeeAiA_icC0jkfGnHmpNLVVys77Lk8dJ7HdZNOYHq8H3lgAuQ%3D%3D&host=rr1---sn-4g5edn6k.googlevideo.com&title=yt5s.com-Talent%20Against%20Cancer%20Show" geometry="" scale="0.15 0.15 0.15" autoplay='false' id = "videoForOnClick" loop="true"></a-video>
+
+      <a-entity light="color:#BBB;type:ambient;intensity:0.41" data-aframe-default-light="" aframe-injected=""></a-entity>
+
+      <a-entity light="color:#BBB;type:spot;intensity:0.31" data-aframe-default-light="" position="0 1.112 3.486" aframe-injected=""></a-entity>
+
+      <a-entity light="intensity:0.29;decay:0" position="0 5.64903 4.35221" data-aframe-default-light="" aframe-injected=""></a-entity>
+    </a-scene>
+</div>
+<!---------------------------------------------------->
+    
+    <p class="specialMessage"><i>If black screen persists while trying to view The Show, <a href="https://youtu.be/OwdR6UdXPv0">click here</a>. Note: This issue may occur if viewing website on replit.com</i></p>
+    <p class="specialMessage">Thank you so much for attending today's show! With your donations, you are helping to make a difference. All funds raised from The Show will go directly to the American Cancer Foundation in a global effort of finding a cure to cancer. Together, we can make a difference!</p>
+    <p class="specialMessage">Be sure to click vote for your favorite talent submission below! For every ten votes, TAC will personally donate $5 to the American Cancer Foundation.</p>
+
+    <div class = "votingSystem">
+      <button class = "votingButtons" id = "sm">Solving Rubik's Cubes</button> 
+      <p class = "votesDisplay" id = "smNumOfVotes"></p>
+
+      <button class = "votingButtons" id = "kp">Chinese YoYo</button> 
+      <p class = "votesDisplay" id = "kpNumOfVotes"></p>
+
+      <button class = "votingButtons" id = "ak">Guitar</button> 
+      <p class = "votesDisplay" id = "akNumOfVotes"></p>
+
+      <button class = "votingButtons" id = "sb">Trombone</button> 
+      <p class = "votesDisplay" id = "sbNumOfVotes"></p>
+
+      <button class = "votingButtons" id = "cpl">Water Bottle Flip</button> 
+      <p class = "votesDisplay" id = "cplNumOfVotes"></p>
+    </div>
+  </body>
+</html>
